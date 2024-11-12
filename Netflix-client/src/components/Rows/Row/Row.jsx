@@ -40,12 +40,16 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
     }  
     const opts={
         height: '390',
-        width: "100%",
-        playVars:
-        {
-            autoplay:1,
+        width: '100%',
+        playerVars: {
+            
+            autoplay: 1,
         },
-
+    };
+    if (trailerUrl=="")
+    {
+        setTrailerUrl(null)
+    console.log(`trailer ${trailerUrl}`)
     }
   return (
     <div className="row">
@@ -60,7 +64,7 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
             )}
             
         </div>
-        <div style={{padding:'40px'}}>
+        <div style={{padding:'10px'}}>
             {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
         </div>
     

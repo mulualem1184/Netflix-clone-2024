@@ -7,7 +7,9 @@ const requests = {
   fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
   fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
   fetchTopRatedMovies: `/movie/top_rated?api_key=${API_KEY}&language=en-US`, // Fixed typo in URL (`monvie` -> `movie`)
-  fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`, // Fixed typo in 'with_ngeners'
+  fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+  fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
+  fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`, // Fixed typo in 'with_ngeners'
   fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`, // Fixed typo in 'with_ngeners'
   fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`, // Fixed typo in 'with_ngeners'
   fetchTVshow: `/tv/popular?api_key=${API_KEY}&language=en-US&page=1`
